@@ -159,7 +159,7 @@ $conn->close();
                         <td class='border px-2 py-1'>" . htmlspecialchars($row["firstname"] ?? '') . "</td>
                         <td class='border px-2 py-1'>" . htmlspecialchars($row["lastname"] ?? '') . "</td>
                         <td class='border px-2 py-1'>" . htmlspecialchars($row["email"] ?? '') . "</td>
-                        <td class='border px-2 py-1'>" . htmlspecialchars($row["phone"] ?? '') . "</td>
+                        
                         <td class='border px-2 py-1'>" . htmlspecialchars($row["password_lock"] ?? '') . "</td>
                         <td class='border px-2 py-1'>" . htmlspecialchars($row["created_at"] ?? '') . "</td>
                       </tr>";
