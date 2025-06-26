@@ -156,13 +156,14 @@ $conn->close();
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>
-                                <td class='border px-2 py-1'>" . htmlspecialchars($row["firstname"]) . "</td>
-                                <td class='border px-2 py-1'>" . htmlspecialchars($row["lastname"]) . "</td>
-                                <td class='border px-2 py-1'>" . htmlspecialchars($row["email"]) . "</td>
-                                <td class='border px-2 py-1'>" . htmlspecialchars($row["phone"]) . "</td>
-                                <td class='border px-2 py-1'>" . htmlspecialchars($row["password_lock"]) . "</td>
-                                <td class='border px-2 py-1'>" . htmlspecialchars($row["created_at"]) . "</td>
-                              </tr>";
+                        <td class='border px-2 py-1'>" . htmlspecialchars($row["firstname"] ?? '') . "</td>
+                        <td class='border px-2 py-1'>" . htmlspecialchars($row["lastname"] ?? '') . "</td>
+                        <td class='border px-2 py-1'>" . htmlspecialchars($row["email"] ?? '') . "</td>
+                        <td class='border px-2 py-1'>" . htmlspecialchars($row["phone"] ?? '') . "</td>
+                        <td class='border px-2 py-1'>" . htmlspecialchars($row["password_lock"] ?? '') . "</td>
+                        <td class='border px-2 py-1'>" . htmlspecialchars($row["created_at"] ?? '') . "</td>
+                      </tr>";
+                
                     }
                 } else {
                     echo "<tr><td colspan='6' class='border px-2 py-1 text-center'>ไม่มีข้อมูล</td></tr>";
